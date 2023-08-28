@@ -4,5 +4,7 @@
 /str-consumer/target/
 /str-consumer/.settings/
 /str-consumer/target/
+/payment-service/.settings/
+/payment-service/target/
 /json-consumer/.settings/
 /json-consumer/target/
