@@ -1,5 +1,6 @@
 package com.souza.caio.strconsumer.listeners;
 
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 import com.souza.caio.strconsumer.custom.StrConsumerCustomListener;
@@ -20,7 +21,7 @@ public class StrConsumerListener {
 		log.info("LOG ::: Receive message{}", message);
 	}
 	
-	@StrConsumerCustomListener(groupId="group-2")
+	@KafkaListener(groupId="group-2", topics = "str-topic" ,containerFactory = "validMessageContainerFactory")
 	public void history(String message) {
 		log.info("HISTORY", message);
 	}
